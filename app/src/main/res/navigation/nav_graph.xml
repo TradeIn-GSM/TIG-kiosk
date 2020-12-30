@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/watingFragment">
 
+    <fragment
+        android:id="@+id/buyLoctionFragment"
+        android:name="com.example.myapplication.BuyLoctionFragment"
+        android:label="BuyLoctionFragment" >
+        <action
+            android:id="@+id/action_buyLoctionFragment_to_productBuyFragment"
+            app:destination="@id/productBuyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/watingFragment"
+        android:name="com.example.myapplication.WatingFragment"
+        android:label="fragment_wating"
+        tools:layout="@layout/fragment_wating" >
+        <action
+            android:id="@+id/action_watingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.myapplication.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_buyLoctionFragment"
+            app:destination="@id/buyLoctionFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_sellLocationFragment"
+            app:destination="@id/sellLocationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_chargePointFragment"
+            app:destination="@id/chargePointFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productBuyFragment"
+        android:name="com.example.myapplication.ProductBuyFragment"
+        android:label="ProductBuyFragment" />
+    <fragment
+        android:id="@+id/sellLocationFragment"
+        android:name="com.example.myapplication.SellLocationFragment"
+        android:label="SellLocationFragment" >
+        <action
+            android:id="@+id/action_sellLocationFragment_to_sellProductFragment"
+            app:destination="@id/sellProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellProductFragment"
+        android:name="com.example.myapplication.SellProductFragment"
+        android:label="SellProductFragment" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.myapplication.SignUpFragment"
+        android:label="SignUpFragment" />
+    <fragment
+        android:id="@+id/finish_charge_Fragment"
+        android:name="com.example.myapplication.Finish_charge_Fragment"
+        android:label="fragment_sell_product"
+        tools:layout="@layout/fragment_sell_product" />
+    <fragment
+        android:id="@+id/chargePointFragment"
+        android:name="com.example.myapplication.ChargePointFragment"
+        android:label="fragment_charge_point"
+        tools:layout="@layout/fragment_charge_point" >
+        <action
+            android:id="@+id/action_chargePointFragment_to_finish_charge_Fragment"
+            app:destination="@id/finish_charge_Fragment" />
+    </fragment>
 </navigation>

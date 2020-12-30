@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SignUpFragment">
+    tools:context=".ChargePointFragment">
 
 
     <ImageView
@@ -20,9 +20,10 @@
         android:layout_width="530px"
         android:layout_height="190px"
         android:layout_marginTop="40px"
-        android:text="회원가입"
+        android:text="충전하기"
         android:textColor="@color/black"
         android:textSize="144px"
+        android:gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -43,15 +44,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="84px"
-            android:layout_marginTop="55px"
-            android:text="회원명"
+            android:layout_marginTop="119px"
+            android:text="충전할 금액"
             android:textColor="@color/black"
-            android:textSize="30px" />
+            android:textSize="48px" />
 
         <EditText
             android:id="@+id/editTextTextPersonName"
             android:layout_width="match_parent"
-            android:layout_height="81px"
+            android:layout_height="114px"
             android:layout_marginLeft="81px"
             android:layout_marginTop="15px"
             android:layout_marginRight="80px"
@@ -64,15 +65,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="84px"
-            android:layout_marginTop="23px"
-            android:text="E-mail"
+            android:layout_marginTop="61px"
+            android:text="들어갈 금액"
             android:textColor="@color/black"
-            android:textSize="30px" />
+            android:textSize="48px" />
 
         <EditText
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
-            android:layout_height="81px"
+            android:layout_height="114px"
             android:layout_marginLeft="81px"
             android:layout_marginTop="15px"
             android:layout_marginRight="80px"
@@ -80,58 +81,19 @@
             android:ems="10"
             android:inputType="textPersonName" />
 
-        <TextView
-            android:id="@+id/Password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="84px"
-            android:layout_marginTop="23px"
-            android:text="비밀번호"
-            android:textColor="@color/black"
-            android:textSize="30px" />
 
-        <EditText
-            android:id="@+id/editTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="81px"
-            android:layout_marginLeft="81px"
-            android:layout_marginTop="15px"
-            android:layout_marginRight="80px"
-            android:background="@drawable/edittext_bg"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="84px"
-            android:layout_marginTop="23px"
-            android:text="비밀번호 재입력"
-            android:textColor="@color/black"
-            android:textSize="30px" />
-
-        <EditText
-            android:id="@+id/editTextCheckPassword"
-            android:layout_width="match_parent"
-            android:layout_height="81px"
-            android:layout_marginLeft="81px"
-            android:layout_marginTop="15px"
-            android:layout_marginRight="80px"
-            android:background="@drawable/edittext_bg"
-            android:ems="10"
-            android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="166px"
             android:layout_height="75px"
             android:layout_gravity="right"
-            android:layout_marginRight="81px"
+            android:layout_marginRight="114px"
             android:insetTop="0dp"
             android:insetBottom="0dp"
             android:background="@color/white"
-            android:layout_marginTop="20dp"
-            android:text="가입"
+            android:layout_marginTop="86px"
+            android:text="완료"
             android:textSize="30px"
             android:textStyle="bold"/>
 
