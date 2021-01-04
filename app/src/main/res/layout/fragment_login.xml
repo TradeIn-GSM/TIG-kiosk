@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".LoginFragment">
+    tools:context=".ui.LoginFragment">
 
 
     <ImageView
@@ -50,7 +50,7 @@
             android:textSize="48px" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/userid"
             android:layout_width="match_parent"
             android:layout_height="114px"
             android:layout_marginLeft="81px"
@@ -71,7 +71,7 @@
             android:textSize="48px" />
 
         <EditText
-            android:id="@+id/editTextEmail"
+            android:id="@+id/userpassword"
             android:layout_width="match_parent"
             android:layout_height="114px"
             android:layout_marginLeft="81px"
@@ -79,12 +79,13 @@
             android:layout_marginRight="80px"
             android:background="@drawable/edittext_bg"
             android:ems="10"
+            android:password="true"
             android:inputType="textPersonName" />
 
 
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/login"
             android:layout_width="166px"
             android:layout_height="75px"
             android:layout_gravity="right"

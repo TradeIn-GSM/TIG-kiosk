@@ -1,15 +1,21 @@
-package com.example.myapplication
+package com.example.myapplication.ui
 
 import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myapplication.R
+import retrofit2.Retrofit
+
+
+
 
 private var decorView: View? = null
 private var uiOption = 0
 
 
 class MainActivity : AppCompatActivity() {
+    private val mRetrofit: Retrofit? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,4 +27,5 @@ class MainActivity : AppCompatActivity() {
 
         decorView!!.systemUiVisibility = uiOption
     }
+
 }

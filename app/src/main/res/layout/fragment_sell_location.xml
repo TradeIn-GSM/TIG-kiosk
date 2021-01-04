@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SellLocationFragment">
+    tools:context=".ui.SellLocationFragment">
 
 
     <ImageView
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <GridLayout
-        android:id="@+id/GridLayout"
+        android:id="@+id/BT"
         android:layout_width="1100px"
         android:layout_height="770px"
         android:layout_marginTop="51px"

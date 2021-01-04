@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/watingFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/buyLoctionFragment"
-        android:name="com.example.myapplication.BuyLoctionFragment"
+        android:name="com.example.myapplication.ui.BuyLoctionFragment"
         android:label="BuyLoctionFragment" >
         <action
             android:id="@+id/action_buyLoctionFragment_to_productBuyFragment"
@@ -15,34 +15,37 @@
     </fragment>
     <fragment
         android:id="@+id/watingFragment"
-        android:name="com.example.myapplication.WatingFragment"
+        android:name="com.example.myapplication.ui.WatingFragment"
         android:label="fragment_wating"
         tools:layout="@layout/fragment_wating" >
         <action
             android:id="@+id/action_watingFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_watingFragment_to_sellLocationFragment"
+            app:destination="@id/sellLocationFragment" />
+        <action
+            android:id="@+id/action_watingFragment_to_chargePointFragment"
+            app:destination="@id/chargePointFragment" />
+        <action
+            android:id="@+id/action_watingFragment_to_buyLoctionFragment"
+            app:destination="@id/buyLoctionFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.myapplication.LoginFragment"
+        android:name="com.example.myapplication.ui.LoginFragment"
         android:label="LoginFragment" >
         <action
-            android:id="@+id/action_loginFragment_to_buyLoctionFragment"
-            app:destination="@id/buyLoctionFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_sellLocationFragment"
-            app:destination="@id/sellLocationFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_chargePointFragment"
-            app:destination="@id/chargePointFragment" />
+            android:id="@+id/action_loginFragment_to_watingFragment"
+            app:destination="@id/watingFragment" />
     </fragment>
     <fragment
         android:id="@+id/productBuyFragment"
-        android:name="com.example.myapplication.ProductBuyFragment"
+        android:name="com.example.myapplication.ui.ProductBuyFragment"
         android:label="ProductBuyFragment" />
     <fragment
         android:id="@+id/sellLocationFragment"
-        android:name="com.example.myapplication.SellLocationFragment"
+        android:name="com.example.myapplication.ui.SellLocationFragment"
         android:label="SellLocationFragment" >
         <action
             android:id="@+id/action_sellLocationFragment_to_sellProductFragment"
@@ -50,20 +53,20 @@
     </fragment>
     <fragment
         android:id="@+id/sellProductFragment"
-        android:name="com.example.myapplication.SellProductFragment"
+        android:name="com.example.myapplication.ui.SellProductFragment"
         android:label="SellProductFragment" />
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.myapplication.SignUpFragment"
+        android:name="com.example.myapplication.ui.SignUpFragment"
         android:label="SignUpFragment" />
     <fragment
         android:id="@+id/finish_charge_Fragment"
-        android:name="com.example.myapplication.Finish_charge_Fragment"
+        android:name="com.example.myapplication.ui.Finish_charge_Fragment"
         android:label="fragment_sell_product"
         tools:layout="@layout/fragment_sell_product" />
     <fragment
         android:id="@+id/chargePointFragment"
-        android:name="com.example.myapplication.ChargePointFragment"
+        android:name="com.example.myapplication.ui.ChargePointFragment"
         android:label="fragment_charge_point"
         tools:layout="@layout/fragment_charge_point" >
         <action
