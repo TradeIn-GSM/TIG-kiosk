@@ -27,9 +27,19 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="회원 정보: 류호성\n\t\t\t\t\t\t\t10000포인트"
+            android:text="회원 정보: 류호성"
+            android:textColor="@color/black"
+            android:textSize="30px"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="포인트: 0"
             android:textColor="@color/black"
             android:textSize="30px"
             app:layout_constraintEnd_toEndOf="parent"

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.R
+import com.example.myapplication.data.LoginResponse
 import kotlinx.android.synthetic.main.fragment_wating.view.*
 
 class WatingFragment : Fragment() {
@@ -26,6 +27,8 @@ class WatingFragment : Fragment() {
             findNavController().navigate(R.id.action_watingFragment_to_chargePointFragment)
 
         }
+        view.username.text = LoginResponse().username
+        view.point.text = LoginResponse().point
         return view;
     }
 

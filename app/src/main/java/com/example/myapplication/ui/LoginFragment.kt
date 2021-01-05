@@ -36,7 +36,13 @@ class LoginFragment : Fragment() {
                     call: Call<LoginResponse>,
                     response: Response<LoginResponse>,
                 ) {
-                    findNavController().navigate(R.id.action_loginFragment_to_watingFragment)
+                    if(response.code() == 200){
+                        findNavController().navigate(R.id.action_loginFragment_to_watingFragment)
+                    }
+                    else {
+
+                    }
+                    println("리스폰스 값값값값값값값값값:"+response.code())
                 }
 
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
