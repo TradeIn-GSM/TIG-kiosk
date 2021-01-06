@@ -54,7 +54,12 @@
     <fragment
         android:id="@+id/sellProductFragment"
         android:name="com.example.myapplication.ui.SellProductFragment"
-        android:label="SellProductFragment" />
+        android:label="SellProductFragment" >
+        <action
+            android:id="@+id/action_sellProductFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.myapplication.ui.SignUpFragment"
