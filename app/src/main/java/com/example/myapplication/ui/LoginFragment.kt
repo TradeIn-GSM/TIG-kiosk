@@ -2,19 +2,19 @@ package com.example.myapplication.ui
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.R
 import com.example.myapplication.data.LoginResponse
 import com.example.myapplication.network.RetrofitClient
-import com.example.myapplication.network.Service
 import kotlinx.android.synthetic.main.fragment_login.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class LoginFragment : Fragment() {
 
@@ -24,25 +24,28 @@ class LoginFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         val view = inflater.inflate(R.layout.fragment_login, container, false)
 
         view.login.setOnClickListener {
-            Log.d("유저id",view.userid.text.toString())
-            RetrofitClient().getUserAPI().Login(view.userid.text.toString(), view.userpassword.text.toString()).enqueue(object : Callback<LoginResponse>{
+            Log.d("유저id", view.userid.text.toString())
+            RetrofitClient().getUserAPI().Login(view.userid.text.toString(), view.userpassword.text.toString()).enqueue(object : Callback<LoginResponse> {
 
                 override fun onResponse(
                     call: Call<LoginResponse>,
                     response: Response<LoginResponse>,
                 ) {
-                    if(response.code() == 200){
-                        findNavController().navigate(R.id.action_loginFragment_to_watingFragment)
-                    }
-                    else {
+                    if (response.code() == 200) {
+                        findNavController().navigate(R.id.action_loginFragment_to_watingFragment,
+                            setUserInfo(response.body()?.username.toString(),
+                                response.body()?.point.toString(),
+                                response.body()?.userid.toString()))
+
+                    } else {
 
                     }
-                    println("리스폰스 값값값값값값값값값:"+response.code())
+                    println("리스폰스 값값값값값값값값값:" + response.code())
                 }
 
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
@@ -53,6 +56,14 @@ class LoginFragment : Fragment() {
 
         }
         return view
+    }
+
+    fun setUserInfo(name: String, point: String, id: String): Bundle {
+        val bundle = Bundle(3)
+        bundle.putString("Name", name)
+        bundle.putString("Point", point)
+        bundle.putString("Id", id)
+        return bundle
     }
 
 }

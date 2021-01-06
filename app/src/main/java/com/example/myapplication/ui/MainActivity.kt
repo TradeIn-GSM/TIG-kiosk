@@ -3,6 +3,7 @@ package com.example.myapplication.ui
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
 import retrofit2.Retrofit
@@ -19,6 +20,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        var actionBar: ActionBar?
+
+        actionBar = supportActionBar
+        actionBar?.hide()
         decorView = window.decorView
         uiOption = window.decorView.systemUiVisibility
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) uiOption = uiOption or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION

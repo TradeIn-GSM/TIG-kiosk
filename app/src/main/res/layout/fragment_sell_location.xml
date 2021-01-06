@@ -41,6 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
         <Button
+            android:id="@+id/sellFirst"
             android:layout_width="550px"
             android:layout_height="385px"
             android:text="1"
@@ -51,6 +52,7 @@
             app:layout_gravity="fill"
             />
         <Button
+            android:id="@+id/sellSecond"
             android:layout_width="550px"
             android:layout_height="385px"
             android:text="2"
@@ -61,6 +63,7 @@
             app:layout_gravity="fill"
             />
         <Button
+            android:id="@+id/sellThird"
             android:layout_width="550px"
             android:layout_height="385px"
             android:text="3"
@@ -71,6 +74,7 @@
             app:layout_gravity="fill"
             />
         <Button
+            android:id="@+id/sellForth"
             android:layout_width="550px"
             android:layout_height="385px"
             android:text="4"

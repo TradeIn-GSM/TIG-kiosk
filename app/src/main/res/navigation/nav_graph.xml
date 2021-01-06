@@ -48,8 +48,8 @@
         android:name="com.example.myapplication.ui.SellLocationFragment"
         android:label="SellLocationFragment" >
         <action
-            android:id="@+id/action_sellLocationFragment_to_sellProductFragment"
-            app:destination="@id/sellProductFragment" />
+            android:id="@+id/action_sellLocationFragment_to_sellPriceFragment"
+            app:destination="@id/sellPriceFragment" />
     </fragment>
     <fragment
         android:id="@+id/sellProductFragment"
@@ -72,5 +72,14 @@
         <action
             android:id="@+id/action_chargePointFragment_to_finish_charge_Fragment"
             app:destination="@id/finish_charge_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellPriceFragment"
+        android:name="com.example.myapplication.ui.SellPriceFragment"
+        android:label="fragment_sell_price"
+        tools:layout="@layout/fragment_sell_price" >
+        <action
+            android:id="@+id/action_sellPriceFragment_to_sellProductFragment"
+            app:destination="@id/sellProductFragment" />
     </fragment>
 </navigation>
