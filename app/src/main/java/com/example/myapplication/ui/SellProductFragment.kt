@@ -20,7 +20,7 @@ class SellProductFragment : Fragment() {
         mHandler.postDelayed(Runnable {
             findNavController().navigate(R.id.action_sellProductFragment_to_loginFragment)
 
-        }, 3000)
+        }, 7000)
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_sell_product, container, false)
