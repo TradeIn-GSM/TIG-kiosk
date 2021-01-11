@@ -1,5 +1,6 @@
 package com.example.myapplication.network
 
+import com.example.myapplication.data.BuyResponse
 import com.example.myapplication.data.LoginRequest
 import com.example.myapplication.data.LoginResponse
 import retrofit2.Call
@@ -13,4 +14,16 @@ interface Service {
 
     @GET("/product/sell")
     fun sell(@Query ("cell")cell: String, @Query ("name")name: String, @Query ("userid")userid: String, @Query ("price")price: String): Call<Void>
+
+    @FormUrlEncoded
+    @POST("/product/buy")
+    fun buy(@Field ("cell")cell: String, @Field ("userid")userid: String): Call<BuyResponse>
+
+    @FormUrlEncoded
+    @POST("/point/insert")
+    fun insertMoney(@Field ("money")money: String): Call<Void>
+
+    @FormUrlEncoded
+    @POST("/point/charge")
+    fun charge(@Field ("money")money: String, @Field ("userid")userid: String): Call<Void>
 }

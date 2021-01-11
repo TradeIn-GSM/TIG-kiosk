@@ -34,13 +34,14 @@ class WatingFragment : Fragment() {
             findNavController().navigate(R.id.action_watingFragment_to_sellLocationFragment,SellUserInfo(getname,getId))
         }
         view.pointCharge.setOnClickListener {
-            findNavController().navigate(R.id.action_watingFragment_to_chargePointFragment)
+            findNavController().navigate(R.id.action_watingFragment_to_chargePointFragment,BuyUserInfo(getpoint, getId))
 
         }
         view.username.hint = getname
         view.point.hint = getpoint
         return view;
     }
+
     fun BuyUserInfo(point: String, id: String): Bundle {
         val bundle = Bundle(2)
         bundle.putString("Point", point)

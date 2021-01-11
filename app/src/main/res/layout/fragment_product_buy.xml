@@ -23,11 +23,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Charge_finish_ment"
+        android:id="@+id/finish_ment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="물건을 가져가주세요."
-        android:textColor="@color/black"
+        android:hint=""
+        android:textColorHint="@color/black"
         android:textSize="96px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

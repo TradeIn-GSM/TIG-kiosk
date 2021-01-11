@@ -7,13 +7,19 @@ import retrofit2.create
 
 class RetrofitClient {
     private var retrofit = Retrofit.Builder()
-        .baseUrl("https://d73b33df7196.ngrok.io")
+        .baseUrl("https://8bed7c69c8ee.ngrok.io/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
     fun getUserAPI() : Service{
         return retrofit.create(Service::class.java)
     }
     fun sellProduct() : Service{
+        return retrofit.create(Service::class.java)
+    }
+    fun buyProduct() : Service{
+        return retrofit.create(Service::class.java)
+    }
+    fun moneyAPI() : Service{
         return retrofit.create(Service::class.java)
     }
 }
