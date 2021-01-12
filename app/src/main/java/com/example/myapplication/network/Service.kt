@@ -1,8 +1,8 @@
 package com.example.myapplication.network
 
 import com.example.myapplication.data.BuyResponse
-import com.example.myapplication.data.LoginRequest
 import com.example.myapplication.data.LoginResponse
+import com.example.myapplication.data.pointResponse
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -25,9 +25,12 @@ interface Service {
 
     @FormUrlEncoded
     @POST("/point/charge")
-    fun charge(@Field ("money")money: String, @Field ("userid")userid: String): Call<Void>
+    fun charge(@Field ("userid") userid: String): Call<Void>
 
     @FormUrlEncoded
     @POST("/user/join")
     fun join(@Field ("userid")userid: String, @Field ("username")username: String, @Field ("userpassword")userpassword: String): Call<Void>
+
+    @GET("/point/get")
+    fun point(): Call<pointResponse>
 }

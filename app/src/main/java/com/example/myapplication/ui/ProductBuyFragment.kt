@@ -37,7 +37,7 @@ class ProductBuyFragment : Fragment() {
 
             override fun onResponse(call: Call<BuyResponse>, response: Response<BuyResponse>) {
                 if (response.body()?.buyProduct.toString() == "no") {
-                    view.finish_ment.hint = "비어있는 공간입니다."
+                    view.finish_ment.text = "비어있는 공간입니다."
                 } else {
                     view.finish_ment.hint = "구매 완료."
                 }

@@ -1,13 +1,13 @@
 package com.example.myapplication.ui
 
 import android.os.Bundle
-import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.R
+import com.example.myapplication.data.pointResponse
 import com.example.myapplication.network.RetrofitClient
 import kotlinx.android.synthetic.main.fragment_charge_point.view.*
 import retrofit2.Call
@@ -30,30 +30,45 @@ class ChargePointFragment : Fragment() {
     ): View? {
         var view = inflater.inflate(R.layout.fragment_charge_point, container, false)
         view.chargeCheckButton.setOnClickListener {
+            RetrofitClient().moneyAPI().point().enqueue(object : Callback<pointResponse>{
+                override fun onResponse(
+                    call: Call<pointResponse>,
+                    response: Response<pointResponse>
+                ) {
+                    view.chargePointMoney.hint = response.body()?.point.toString()
+                }
 
+                override fun onFailure(call: Call<pointResponse>, t: Throwable) {
+
+                }
+
+            })
         }
         view.chargePointButton.setOnClickListener {
-            RetrofitClient().moneyAPI().insertMoney(view.chargePointMoney.text.toString())//돈확인한것으로 수정해야됨
-                .enqueue(object : Callback<Void>{
-                    override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                        RetrofitClient().moneyAPI().charge(view.chargePointMoney.text.toString(),id)
-                            .enqueue(object : Callback<Void>{
-                            override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                                findNavController().navigate(R.id.action_chargePointFragment_to_finish_charge_Fragment)
-                            }
+            RetrofitClient().moneyAPI().point().enqueue(object : Callback<pointResponse>{
+                override fun onResponse(
+                    call: Call<pointResponse>,
+                    response: Response<pointResponse>
+                ) {
+                    RetrofitClient().moneyAPI().charge(id).enqueue(object : Callback<Void>{
+                        override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                            findNavController().navigate(R.id.action_chargePointFragment_to_finish_charge_Fragment)
+                        }
 
-                            override fun onFailure(call: Call<Void>, t: Throwable) {
+                        override fun onFailure(call: Call<Void>, t: Throwable) {
+                            println("moneyAPI.charge() 실패")
+                        }
 
-                            }
+                    })
 
-                        })
-                    }
+                }
 
-                    override fun onFailure(call: Call<Void>, t: Throwable) {
+                override fun onFailure(call: Call<pointResponse>, t: Throwable) {
+                    println("moneyAPI.point() 실패")
+                }
 
-                    }
+            })
 
-                })
         }
         return view
     }
