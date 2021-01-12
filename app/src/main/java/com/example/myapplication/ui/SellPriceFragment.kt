@@ -34,7 +34,7 @@ class SellPriceFragment : Fragment() {
         view.sellButton.setOnClickListener {
             if (view.productName.text.toString()==""||view.sellPrice.text.toString()=="") {
                 RetrofitClient().sellProduct()
-                    .sell(cell, username, userid, view.sellPrice.text.toString())
+                    .sell(cell, username, view.productName.text.toString(), view.sellPrice.text.toString())
                     .enqueue(object : Callback<Void>{
                         override fun onResponse(call: Call<Void>, response: Response<Void>) {
                             findNavController().navigate(R.id.action_sellPriceFragment_to_sellProductFragment)
