@@ -55,6 +55,9 @@ class LoginFragment : Fragment() {
             })
 
         }
+        view.loginToSiginupButton.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_signUpFragment)
+        }
         return view
     }
 

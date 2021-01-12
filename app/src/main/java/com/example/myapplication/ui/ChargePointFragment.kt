@@ -33,7 +33,7 @@ class ChargePointFragment : Fragment() {
 
         }
         view.chargePointButton.setOnClickListener {
-            RetrofitClient().moneyAPI().insertMoney(view.chargePointMoney.text.toString())//새로고침한것으로 수정해야됨
+            RetrofitClient().moneyAPI().insertMoney(view.chargePointMoney.text.toString())//돈확인한것으로 수정해야됨
                 .enqueue(object : Callback<Void>{
                     override fun onResponse(call: Call<Void>, response: Response<Void>) {
                         RetrofitClient().moneyAPI().charge(view.chargePointMoney.text.toString(),id)

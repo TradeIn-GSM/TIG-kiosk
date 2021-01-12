@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="84px"
             android:layout_marginTop="119px"
-            android:text="E-mail"
+            android:text="ID"
             android:textColor="@color/black"
             android:textSize="48px" />
 
@@ -85,20 +85,33 @@
             android:inputType="textPersonName" />
 
 
+        <LinearLayout
+            android:layout_marginTop="80px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/loginToSiginupButton"
+                android:layout_width="166px"
+                android:layout_height="75px"
+                android:background="@color/white"
+                android:layout_marginLeft="65dp"
+                android:layout_marginRight="100dp"
+                android:text="회원가입"
+                android:textSize="30px"
+                android:textStyle="bold"/>
 
-        <Button
-            android:id="@+id/login"
-            android:layout_width="166px"
-            android:layout_height="75px"
-            android:layout_gravity="right"
-            android:layout_marginRight="114px"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            android:background="@color/white"
-            android:layout_marginTop="86px"
-            android:text="로그인"
-            android:textSize="30px"
-            android:textStyle="bold"/>
+            <Button
+                android:id="@+id/login"
+                android:layout_width="166px"
+                android:layout_height="75px"
+                android:background="@color/white"
+                android:layout_marginRight="65dp"
+                android:text="로그인"
+                android:textSize="30px"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

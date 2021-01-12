@@ -26,4 +26,8 @@ interface Service {
     @FormUrlEncoded
     @POST("/point/charge")
     fun charge(@Field ("money")money: String, @Field ("userid")userid: String): Call<Void>
+
+    @FormUrlEncoded
+    @POST("/user/join")
+    fun join(@Field ("userid")userid: String, @Field ("username")username: String, @Field ("userpassword")userpassword: String): Call<Void>
 }

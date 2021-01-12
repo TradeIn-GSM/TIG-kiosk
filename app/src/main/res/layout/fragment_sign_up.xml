@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewPersonName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="84px"
@@ -49,7 +49,7 @@
             android:textSize="30px" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/editTextPersonName"
             android:layout_width="match_parent"
             android:layout_height="81px"
             android:layout_marginLeft="81px"
@@ -60,12 +60,12 @@
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/email"
+            android:id="@+id/textViewId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="84px"
             android:layout_marginTop="23px"
-            android:text="E-mail"
+            android:text="ID"
             android:textColor="@color/black"
             android:textSize="30px" />
 
@@ -81,7 +81,7 @@
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/Password"
+            android:id="@+id/TextViewPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="84px"
@@ -102,6 +102,7 @@
             android:inputType="textPersonName" />
 
         <TextView
+            android:id="@+id/textViewCheckPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="84px"
@@ -121,19 +122,36 @@
             android:ems="10"
             android:inputType="textPersonName" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="166px"
-            android:layout_height="75px"
-            android:layout_gravity="right"
-            android:layout_marginRight="81px"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            android:background="@color/white"
-            android:layout_marginTop="20dp"
-            android:text="가입"
-            android:textSize="30px"
-            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_marginTop="32px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/signupTologinButton"
+                android:layout_width="166px"
+                android:layout_height="75px"
+                android:background="@color/white"
+                android:layout_marginLeft="65dp"
+                android:layout_marginRight="100dp"
+                android:text="로그인"
+                android:textSize="30px"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/signupButton"
+                android:layout_width="166px"
+                android:layout_height="75px"
+                android:background="@color/white"
+                android:layout_marginRight="65dp"
+                android:text="회원가입"
+                android:textSize="30px"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
 
