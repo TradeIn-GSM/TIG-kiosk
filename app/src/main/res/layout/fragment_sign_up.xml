@@ -99,7 +99,7 @@
             android:layout_marginRight="80px"
             android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:password="true" />
 
         <TextView
             android:id="@+id/textViewCheckPass"
@@ -120,7 +120,7 @@
             android:layout_marginRight="80px"
             android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:password="true" />
 
 
         <LinearLayout
