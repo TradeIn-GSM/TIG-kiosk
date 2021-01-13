@@ -1,2 +1,2 @@
 # TIG-kiosk
-https://www.youtube.com/watch?v=-M-KlyioRmg
+[시연 영상] : https://www.youtube.com/watch?v=-M-KlyioRmg
