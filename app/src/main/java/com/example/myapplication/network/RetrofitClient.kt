@@ -7,7 +7,7 @@ import retrofit2.create
 
 class RetrofitClient {
     private var retrofit = Retrofit.Builder()
-        .baseUrl("https://e1d365013fe1.ngrok.io/")
+        .baseUrl("http://10.120.73.74:3000/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
     fun getUserAPI() : Service{
