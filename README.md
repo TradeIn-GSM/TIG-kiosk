@@ -1,5 +1,6 @@
 # TIG-kiosk
 TIG는 '파라바라'를 모티브삼아 제작하였습니다.
+
 2020-12-28 ~ 2021-1-13
 ## 사용한 라이브러리
 [Retrofit] : https://square.github.io/retrofit/
